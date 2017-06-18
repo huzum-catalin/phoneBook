@@ -32,3 +32,15 @@ h1 {
 .notavailable {
     background-color: blueviolet;
 }
+
+.searchBox {
+    width:90%;
+    height: 36px;
+    margin:10px 10px 0 0;
+    padding: 0;
+    float:left;
+}
+
+.input-group-btn {
+    padding-top:11px;
+}
