@@ -1,0 +1,34 @@
+
+h1 {
+     font-size: 24px;
+}
+
+.paddingLink {
+    width: 10%;
+}
+
+#previousLink, #nextLink {
+    width: 40%;
+    color:darkblue;
+}
+
+#previousLink:hover, #nextLink:hover {
+    color:lightblue;
+    cursor: pointer;
+}
+
+#previousLink {
+    text-align:left;
+}
+
+#nextLink {
+    text-align:right;
+}
+
+.smallTd {
+    width:10%;
+}
+
+.notavailable {
+    background-color: blueviolet;
+}
