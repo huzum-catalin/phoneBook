@@ -16,6 +16,7 @@ export class DataListComponent implements OnInit {
   public pagedPhoneList: Phone[];
  private  _phoneDataService : PhoneDataService;
  private  errMsg:string;
+ private filterApplied:boolean;
  // pager object
     pager: any = {};
     
@@ -24,6 +25,7 @@ export class DataListComponent implements OnInit {
  constructor(private _service: PhoneDataService, private paginationService: PaginationService) {
   this._phoneDataService = _service;
   this.counter = 1;
+  this.filterApplied = false;
  }  
 
  ngOnInit() { 
@@ -55,6 +57,17 @@ export class DataListComponent implements OnInit {
     return res;
 }
 
+filterData(input) {
+  
+  this.pagedPhoneList = this.phoneList.filter(x => x.description.toLowerCase().indexOf(input.toLowerCase())>=0);
+  this.filterApplied = true;
+  if(input === '')
+  {
+    this.filterApplied = false;
+    this.setPage(1);
+  }
+}
+
  setPage(page: number) {
         if (page < 1 || page > this.pager.totalPages) {
             return;
@@ -64,7 +77,13 @@ export class DataListComponent implements OnInit {
         this.pager = this.paginationService.getPager(this.phoneList.length, page);
  
         // get current page of items
-        this.pagedPhoneList = this.phoneList.slice(this.pager.startIndex, this.pager.endIndex + 1);
+        if(!this.filterApplied) {
+          this.pagedPhoneList = this.phoneList.slice(this.pager.startIndex, this.pager.endIndex + 1);
+        }
+        else
+        {
+          this.pagedPhoneList = this.pagedPhoneList.slice(this.pager.startIndex, this.pager.endIndex + 1);
+        }
     }
 
   nextPage(){
