@@ -4,17 +4,21 @@ import { Phone }              from './phone';
 @Component({
   selector: 'modal-window',
   templateUrl: './modalWindow.component.html',
-  styleUrls: ['./modalWindow.component.css'],
+  styleUrls: ['./modalWindow.component.css']
 })
 export class ModalComponent {
 
   public visible = false;
   private visibleAnimate = false;
+  private phone:Phone;
+  public description:string;
 
   constructor(){}
 
-  public show(phone:Phone): void {
+  public show(_phone:Phone): void {
     this.visible = true;
+    this.phone = _phone;
+    this.description = this.phone.description;
     setTimeout(() => this.visibleAnimate = true, 100);
   }
 
