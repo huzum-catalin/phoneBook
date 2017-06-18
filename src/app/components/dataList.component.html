@@ -3,23 +3,25 @@
 <table class="table table-striped table-hover table-responsive">
   <thead class="thead-inverse">
     <tr>
-      <th>#</th>
+      
       <th>Offer code</th>
+      <th>Price</th>
       <th>Manufacturer</th>
       <th>Description</th>
       <th>In stock</th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let phone of (phoneList | slice:42 ); let i = index" [attr.data-index]="i" [class.notavailable]="phone.outOfStock">
-      <th scope="row" class="smallTd">{{i}}</th>
+    <tr *ngFor="let phone of pagedPhoneList; let i = index" [attr.data-index]="i" [class.notavailable]="phone.outOfStock">
+      
       <td class="smallTd">{{phone.offercode}}</td>
+      <td>{{phone.priceFrom}}</td>
       <td>{{phone.manufacturer}}</td>
       <td>{{phone.description}}</td>
       <td><input type="checkbox" [(ngModel)]="!phone.outOfStock"/></td>
     </tr>
    <tr>
-     <td colspan="2" id="previousLink" (click)="previousPage()">&lt;&lt; Previous</td>
+     <td colspan="3" id="previousLink" (click)="previousPage()">&lt;&lt; Previous</td>
      <td colspan="2" id="nextLink" (click)="nextPage()">Next &gt;&gt;</td>
    </tr>
   </tbody>

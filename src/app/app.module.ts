@@ -6,6 +6,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { DataListComponent }        from './components/dataList.component';
+import { PaginationService } from './services/paginationService'
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { DataListComponent }        from './components/dataList.component';
 
 
   ],
-  providers: [],
+  providers: [PaginationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
