@@ -5,13 +5,15 @@ import { HttpModule, JsonpModule } from '@angular/http';
 
 
 import { AppComponent } from './app.component';
+import { ModalComponent } from './components/modalWindow.component';
 import { DataListComponent }        from './components/dataList.component';
 import { PaginationService } from './services/paginationService'
 
 @NgModule({
   declarations: [
     AppComponent,
-    DataListComponent
+    DataListComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

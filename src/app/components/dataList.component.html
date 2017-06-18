@@ -29,7 +29,28 @@
       <td>{{phone.priceFrom}}</td>
       <td>{{phone.manufacturer}}</td>
       <td>{{phone.description}}</td>
-      <td><img src="../assets/images/thumbSmartphone.jpg"/></td>
+      <td><!--<img src="../assets/images/thumbSmartphone.jpg"/> -->
+        <button type="button" class="btn btn-info btnImg" (click)="modal1.show()"></button>
+        <!--<div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Some text in the modal.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+        </div>-->
+      </td>
       <td><input type="checkbox" [(ngModel)]="!phone.outOfStock"/></td>
     </tr>
    <tr>
@@ -38,6 +59,10 @@
    </tr>
   </tbody>
 </table>
+
+<modal-window #modal1>
+  </modal-window>
+
 
 <div class="row hidden-lg hidden-xl hidden-md">
   

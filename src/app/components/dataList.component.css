@@ -44,3 +44,11 @@ h1 {
 .input-group-btn {
     padding-top:11px;
 }
+
+.btnImg {
+    background: url("../assets/images/thumbSmartphone.jpg") no-repeat;
+    height: 64px;
+    width:33px;
+    padding: 0 0 0 0;
+    border: none;
+}
