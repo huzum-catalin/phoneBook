@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
-import { Phone }              from '../components/phone';
+import { Phone }              from '../classes/phone';
 
 @Injectable()
 export class PhoneDataService {

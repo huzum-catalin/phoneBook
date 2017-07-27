@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import { Phone }              from './phone';
+import { Phone }              from '../classes/phone';
 
 @Component({
   selector: 'modal-window',
