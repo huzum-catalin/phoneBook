@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import {HelpComponent} from './components/help/help.component';
-import { ModalComponent } from './components/modalWindow.component';
+import { ModalComponent } from './components/modalWindow/modalWindow.component';
 import { DataListComponent }        from './components/dataList/dataList.component';
 import { PaginationService } from './services/paginationService'
 
