@@ -1,8 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
-import { Phone }              from './phone';
-import { PhoneDataService }       from '../services/phoneDataService';
-import { PaginationService } from '../services/paginationService';
+import { Phone }              from '../phone';
+import { PhoneDataService }       from '../../services/phoneDataService';
+import { PaginationService } from '../../services/paginationService';
 
 @Component({
   selector: 'data-list',
