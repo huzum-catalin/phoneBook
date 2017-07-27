@@ -4,11 +4,14 @@
   <thead class="thead-inverse">
     <tr>
       
-      <th>Offer code</th>
-      <th>Price</th>
-      <th>Manufacturer</th>
-      <th>Description</th>
-      <th>In stock</th>
+      <th (click)="sortData('code')">Offer code 
+        <span class="glyphicon glyphicon-triangle-bottom text-success"></span>
+        <span class="glyphicon glyphicon-triangle-top"></span>
+      </th>
+      <th (click)="sortData('price')">Price</th>
+      <th (click)="sortData('manufacturer')">Manufacturer</th>
+      <th (click)="sortData('description')">Description</th>
+      <th (click)="sortData('availability')">In stock</th>
     </tr>
     <tr>
       <td>Search :</td> 

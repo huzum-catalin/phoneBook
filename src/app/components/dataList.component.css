@@ -3,6 +3,10 @@ h1 {
      font-size: 24px;
 }
 
+th:hover {
+    cursor: pointer;
+}
+
 .paddingLink {
     width: 10%;
 }

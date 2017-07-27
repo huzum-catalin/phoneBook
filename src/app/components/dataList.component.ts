@@ -13,10 +13,11 @@ import { PaginationService } from '../services/paginationService';
 export class DataListComponent implements OnInit {
   
  public phoneList: Phone[];
-  public pagedPhoneList: Phone[];
+ public pagedPhoneList: Phone[];
  private  _phoneDataService : PhoneDataService;
  private  errMsg:string;
  private filterApplied:boolean;
+ 
  // pager object
     pager: any = {};
     
@@ -55,6 +56,20 @@ export class DataListComponent implements OnInit {
       }
     }
     return res;
+};
+
+sortData(column) {
+  console.log("Filtering about " + column);
+  switch(column) {
+    case 'price':
+    this.phoneList.sort((n1,n2)=>(n1.priceFrom - n2.priceFrom));
+    this.setPage(1);
+    break;
+  }
+};
+
+sortAscending(phone1:Phone,phone2:Phone) {
+
 }
 
 filterData(input) {
